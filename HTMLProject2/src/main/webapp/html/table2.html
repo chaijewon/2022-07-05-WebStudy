@@ -1,0 +1,106 @@
+<!-- 
+   84 page  => rowspan ,  colspan (가로줄) 
+               ------- 세로줄 
+   table => 속성 
+            ----- width :  넓이
+            ----- height : 길이 
+            ----- background : image , color 
+            ----- cellspacing 
+            ----- cellpadding    자바: 태그명 (클래스) , 속성(멤버변수)
+        => <tr> 
+            ----- bgcolor 
+            ----- height
+           <td> => 실제 데이터 => <bold>(X) => 왼쪽 정렬 
+                   width 
+                   align => left , center , right 
+                   valign => top , middle , bottom ==> middle 
+           <th> => <bold> => 제목  => 가운데 정렬 
+           ------------------------------------ 한줄 문자열 
+           
+    
+    img :이미지 출력 
+         <img src=""  width="" height="" title="">
+                                         ----------- 풍선 도움말 
+              ======  ------------------ width=100% => height는 자동 지정
+              이미지 파일명 , 외부파일 => png,gif,jpg 
+    embed / iframe  
+    ---------------
+         <embed src="" width="" height="">
+         ---------------------------------- 동영상 실행
+         <iframe src="" width="" height=""> 
+           => 동영상 , 다른 HTML파일을 첨부 
+           => shadow 박스 , white 박스 
+    
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Dongle&display=swap" rel="stylesheet">
+<style type="text/css">
+body
+{
+font-family: 'Cute Font', cursive;
+font-family: 'Dongle', sans-serif;
+font-size: 12pt
+}
+</style>
+</head>
+<body>
+  <center>
+    <table width=600 cellpadding=0 cellspacing=0 border=1 bordercolor=black>
+      <tr>
+        <td align="center" width=30% rowspan=5>
+          <img src="movie.jpg" width=100%>
+        </td>
+        <td colspan="2" width=70%>
+          <h3>토르-러브 앤 썬더</h3>
+          <sup>Thor: Love and Thunder</sup>
+        </td>
+      </tr>
+      <tr height="25">
+        <td width=15% align=right>예매율</td>
+        <td width=55%>66.5%</td>
+      </tr>
+      <tr>
+        <td width=15% align=right>감독</td>
+        <td width=55%>타이카 와이티티</td>
+      </tr>
+      <tr>
+        <td width=15% align=right>장르</td>
+        <td width=55%>액션, 어드벤처, 환타지</td>
+      </tr>
+      <tr>
+        <td width=15% align=right>개봉</td>
+        <td width=55%>2022.07.06</td>
+      </tr>
+    </table>
+    <p>
+    <embed src="http://youtube.com/embed/Dlfp3K11C_o" width="600" height="450"></embed>
+    <p>
+    <table width=500>
+      <tr>
+        <td>
+        <pre>
+         영국 언론 가디언의 파버리시오 로마노 기자는 5일(한국시간) 레알 마드리드가 브라질 3인방 비니시우스 주니오르, 호드리구, 에데르 밀리탕과 장기 재계약을 준비하고 있다고 전했다. 
+
+기자는 "레알이 세 선수와 재계약을 진행하고 있다. 비니시우스는 2026년 여름, 밀리탕과 호드리구는 2028년 여름까지 장기 재계약을 한다. 세 선수 모두 10억 유로(약 1조 3562억원)의 바이아웃 조항이 달려있다"라고 전했다. 
+        </pre>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
