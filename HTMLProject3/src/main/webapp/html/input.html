@@ -1,0 +1,63 @@
+<!-- 입력 
+     <input type="">
+            type
+              => 한줄 입력
+                 type=text   => ID,이름 ... 
+                 type=password => 비밀번호 
+              => 버튼 
+                 type=submit => 데이터 전송 버튼 
+                 type=reset => 초기화 
+                 type=button => 기능이 없다 (반드시 자바스크립트)
+                 type=image => submit
+                 type=radio => group을 설정 
+                 type=checkbox 
+              => 기타 
+                 type=date
+                 type=number
+                 type=file
+                 type=hidden =>  수정 , 삭제 , ID,PWD
+                 
+     <textarea> : 멀티라인  ==> rows:height , cols:width 
+     <select> : 콤보박스 
+       |
+      <option>
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  한줄문자열 입력 : 이름 , ID , 제목 ...: <input type=text size=10><br>
+  비밀번호 입력 : <input type=password size=10><br>
+  라디오버튼 : 성별 : <input type=radio name=sex checked>남자 
+                  <input type=radio name=sex>여자<br>
+  체크박스:여러개 선택 :  <input type=checkbox>운동1  
+                     <input type=checkbox>운동2  
+                     <input type=checkbox>운동3  
+                     <input type=checkbox>운동4  
+                     <input type=checkbox>운동5<br>
+  달력 출력 : <input type=date size=20><br> <!-- 자바스크립트 제작 --> 
+  숫자 출력 : <input type=number max="100" min="1"><br>
+  파일 업로드 : <input type=file size=20><br>
+  버튼 => 전송 : <input type=submit value="전송">
+     <input type=button value="우편번호 검색">
+     <input type=reset value="취소">
+     <input type=image src="../image/m.jpg"><br>
+     <textarea rows="10" cols="50"></textarea><br>
+     <select>
+       <option>A</option>
+       <option>B</option>
+       <option>C</option>
+       <option>D</option>
+     </select>
+</body>
+</html>
+
+
+
+
+
+
+

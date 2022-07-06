@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#btn').click(function(){
+		let id=$('#text').val();
+		if(id.trim()=="")
+		{
+			$('#print').text("아이디를 입력하세요");
+		}
+	})
+})
+</script>
+</head>
+<body>
+<!-- ID:<input type=text size=20><br>
+PW:<input type=password size=20> -->
+ <form>
+   <table width=250>
+     <tr>
+       <td width=15% align="right">ID</td>
+       <td width=85%><input type=text size=15></td>
+       
+     </tr>
+     <tr>
+       <td><input type=text size=15 id="text"></td>
+       <td id="print" style="color:red"></td>
+     </tr>
+     <tr>
+       <td width=15% align="right">Password</td>
+       <td width=85%><input type=password size=15></td>
+     </tr>
+     <tr>
+       <td colspan="2" align="center">
+         <input type=button value="로그인" id="btn">
+         <input type=button value="취소">
+       </td>
+     </tr>
+   </table>
+  </form>
+</body>
+</html>
