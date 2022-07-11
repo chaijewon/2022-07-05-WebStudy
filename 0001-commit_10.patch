@@ -1,0 +1,41 @@
+From 716abfba614a760056b5812b620ff391bdbe75d5 Mon Sep 17 00:00:00 2001
+From: chaijewon <vcandjava@nate.com>
+Date: Mon, 11 Jul 2022 18:27:47 +0900
+Subject: [PATCH 1/2] commit_10
+
+---
+ GitRevertProject/src/com/sist/main/MainClass.java | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+diff --git a/GitRevertProject/src/com/sist/main/MainClass.java b/GitRevertProject/src/com/sist/main/MainClass.java
+index 06db123..930b960 100644
+--- a/GitRevertProject/src/com/sist/main/MainClass.java
++++ b/GitRevertProject/src/com/sist/main/MainClass.java
+@@ -1,11 +1,23 @@
+ package com.sist.main;
+-
++/*
++ *     git log --oneline -n 3
++ *     -- (HEAD)
++ *     --
++ *     --
++ *     
++ *     git format-patch -1 (HEAD=> ID)
++ *     
++ *     git revert HEAD
++ *     
++ *     ==> rollback 
++ */
+ public class MainClass {
+ 
+ 	public static void main(String[] args) {
+ 		// TODO Auto-generated method stub
+         System.out.println("Hello Revert Commit -1");
+         System.out.println("Hello Revert Commit -2");
++        System.out.println("Hello Revert Commit -3");
+ 	}
+ 
+ }
+-- 
+2.35.2.windows.1
+
