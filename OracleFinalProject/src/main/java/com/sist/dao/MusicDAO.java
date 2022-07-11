@@ -109,7 +109,7 @@ public class MusicDAO {
 					  +"WHERE num BETWEEN ? AND ?";
 			ps=conn.prepareStatement(sql);
 			// ?에 값을 채운다 
-			int rowSize=10;
+			int rowSize=100;
 			int start=(rowSize*page)-(rowSize-1); // rownum => 1번부터 
 			//  1  , 11 , 21 , 31...
 			int end=rowSize*page;
@@ -160,7 +160,7 @@ public class MusicDAO {
 		try
 		{
 			getConnection();
-			String sql="SELECT CEIL(COUNT(*)/10.0) "
+			String sql="SELECT CEIL(COUNT(*)/100.0) "
 					  +"FROM music "
 					  +"WHERE cno=?";
 			

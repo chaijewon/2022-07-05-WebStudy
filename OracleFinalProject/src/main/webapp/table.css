@@ -48,6 +48,18 @@
 	text-decoration: underline;
 	color:green;
 }
+.a1{
+	text-decoration: none;
+	color:black;
+}
+.a1:HOVER{
+	text-decoration: underline;
+	color:green;
+}
+*{
+	
+	font-family: "맑은 고딕"
+}
 #abc,
 img,
 input[type="submit"],

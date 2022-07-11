@@ -69,13 +69,13 @@ public class MusicServlet extends HttpServlet {
 		 *   String cno=request.getParameter("cno");
 		     String page=request.getParameter("page");
 		 */
-		out.println("<a href=MusicServlet?cno=1>Top100</a>&nbsp;");
-		out.println("<a href=MusicServlet?cno=2>가요</a>&nbsp;");
-		out.println("<a href=MusicServlet?cno=3>POP</a>&nbsp;");
-		out.println("<a href=MusicServlet?cno=4>OST</a>&nbsp;");
-		out.println("<a href=MusicServlet?cno=5>트롯</a>&nbsp;");
-		out.println("<a href=MusicServlet?cno=6>JAZZ</a>&nbsp;");
-		out.println("<a href=MusicServlet?cno=7>CLASSIC</a>");
+		out.println("<a href=MusicServlet?cno=1 class=a1>Top100</a>&nbsp;");
+		out.println("<a href=MusicServlet?cno=2 class=a1>가요</a>&nbsp;");
+		out.println("<a href=MusicServlet?cno=3 class=a1>POP</a>&nbsp;");
+		out.println("<a href=MusicServlet?cno=4 class=a1>OST</a>&nbsp;");
+		out.println("<a href=MusicServlet?cno=5 class=a1>트롯</a>&nbsp;");
+		out.println("<a href=MusicServlet?cno=6 class=a1>JAZZ</a>&nbsp;");
+		out.println("<a href=MusicServlet?cno=7 class=a1>CLASSIC</a>");
 		// 요청 => service() 호출 (HTML변경)
 		// 재요청 => 이전 화면은 메모리에서 해제 => 새로운 파일 생성 
 		//            destory() 
