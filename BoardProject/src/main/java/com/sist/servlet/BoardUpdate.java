@@ -37,7 +37,9 @@ public class BoardUpdate extends HttpServlet {
 				 out.println("<table width=700 class=table_content>");
 				 out.println("<tr>");
 				 out.println("<th align=right width=15%>이름</th>");
-				 out.println("<td width=85%><input type=text name=name size=15 value="+vo.getName()+"></td>");
+				 out.println("<td width=85%><input type=text name=name size=15 value="+vo.getName()+">");
+				 out.println("<input type=hidden name=no value="+no+">");
+				 out.println("</td>");
 				 out.println("</tr>");
 				 out.println("<tr>");
 				 /*
@@ -69,9 +71,47 @@ public class BoardUpdate extends HttpServlet {
 				 out.println("</body>");
 				 out.println("</html>");
 	}
-
+    /*
+     *    Servlet(C) => Java(M) + HTML(V)  
+     *    JSP  => 화면 출력 (View)  MVC
+     *    --------------------------------
+     */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+	    // post => 요청 처리 
+		// JSP / Servlet / Spring / Spring-Boot
+		try
+		{
+			request.setCharacterEncoding("UTF-8");
+		}catch(Exception ex) {}
+		
+		String name=request.getParameter("name"); // 유효성 검사 (Jquery)
+		String subject=request.getParameter("subject");
+		String content=request.getParameter("content");
+		String pwd=request.getParameter("pwd");
+		String no=request.getParameter("no");
+		
+		BoardVO vo=new BoardVO();
+		vo.setName(name);
+		vo.setSubject(subject);
+		vo.setContent(content);
+		vo.setPwd(pwd);
+		vo.setNo(Integer.parseInt(no));
+		
+		//Oracle 전송 
+		BoardDAO dao=new BoardDAO();
+		dao.boardUpdate(vo);
+		//화면이동 ==> Detail
+		response.sendRedirect("BoardDetail?no="+no);
+		
 	}
 
 }
+
+
+
+
+
+
+
+
+
