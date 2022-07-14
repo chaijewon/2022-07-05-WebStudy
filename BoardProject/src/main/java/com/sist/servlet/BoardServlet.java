@@ -40,6 +40,12 @@ public class BoardServlet extends HttpServlet {
 		 out.println("<body>");
 		 out.println("<div>");
 		 out.println("<h1>자유게시판</h1>");
+		 
+		 out.println("<table width=700 class=table_content>");
+		 out.println("<tr>");
+		 out.println("<td><a href=BoardInsert>새글</a></td>");
+		 out.println("</tr>");
+		 out.println("</table>");
 		 out.println("<table width=700 class=table_content>");
 		 out.println("<tr>");
 		 out.println("<th width=10%>번호</th>");
@@ -51,11 +57,11 @@ public class BoardServlet extends HttpServlet {
 		 for(BoardVO vo:list)
 		 {
 			 out.println("<tr class=dataTr>");
-			 out.println("<td width=10%>"+vo.getNo()+"</td>");
-			 out.println("<td width=45%>"+vo.getSubject()+"</td>");
-			 out.println("<td width=15%>"+vo.getName()+"</td>");
-			 out.println("<td width=20%>"+vo.getRegdate().toString()+"</td>");
-			 out.println("<td width=10%>"+vo.getHit()+"</td>");
+			 out.println("<td width=10% align=center>"+vo.getNo()+"</td>");
+			 out.println("<td width=45%><a href=BoardDetail?no="+vo.getNo()+">"+vo.getSubject()+"</a></td>");
+			 out.println("<td width=15% align=center>"+vo.getName()+"</td>");
+			 out.println("<td width=20% align=center>"+vo.getRegdate().toString()+"</td>");
+			 out.println("<td width=10% align=center>"+vo.getHit()+"</td>");
 			 out.println("</tr>");
 		 }
 		 out.println("</div>");

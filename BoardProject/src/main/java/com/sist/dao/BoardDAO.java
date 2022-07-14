@@ -118,7 +118,31 @@ public class BoardDAO {
    }
    // 상세보기 
    // 수정 , 삭제 
-   // 새글 
+   // 새글 => 회원가입 , 장바구니 , 예매 ...
+   public void boardInsert(BoardVO vo)
+   {
+	   try
+	   {
+		   getConnection();
+		   String sql="INSERT INTO freeboard(no,name,subject,content,pwd) "
+				      +"VALUES((SELECT NVL(MAX(no)+1,1) FROM freeboard),?,?,?,?)";
+		   ps=conn.prepareStatement(sql);
+		   ps.setString(1, vo.getName());
+		   ps.setString(2, vo.getSubject());
+		   ps.setString(3, vo.getContent());
+		   ps.setString(4, vo.getPwd());
+		   
+		   ps.executeUpdate();
+	   }catch(Exception ex)
+	   {
+		   System.out.println("boardInsert:에러");
+		   ex.printStackTrace();
+	   }
+	   finally
+	   {
+		   disConnection();
+	   }
+   }
    // 찾기 
    
 }
