@@ -117,6 +117,49 @@ public class BoardDAO {
 	   return total;
    }
    // 상세보기 
+   public BoardVO boardDetail(int no,int type)
+   {
+	   BoardVO vo=new BoardVO();
+	   try
+	   {
+		   getConnection();
+		   if(type==1) // DETAIL
+		   {
+			   String sql="UPDATE freeboard SET "
+					     +"hit=hit+1 "
+					     +"WHERE no=?";
+			   ps=conn.prepareStatement(sql);
+			   ps.setInt(1, no);
+			   ps.executeUpdate(); // 조회수 증가 
+		   }
+		   
+		   // 실제 데이터 읽기 ==> UPDATE , DETIAL 
+		   String sql="SELECT no,name,subject,content,regdate,hit "
+				     +"FROM freeboard "
+				     +"WHERE no=?";
+		   ps=conn.prepareStatement(sql);
+		   ps.setInt(1, no);
+		   ResultSet rs=ps.executeQuery();
+		   rs.next();
+		   vo.setNo(rs.getInt(1));
+		   vo.setName(rs.getString(2));
+		   vo.setSubject(rs.getString(3));
+		   vo.setContent(rs.getString(4));
+		   vo.setRegdate(rs.getDate(5));
+		   vo.setHit(rs.getInt(6));
+		   rs.close();
+		   
+	   }catch(Exception ex)
+	   {
+		   System.out.println("boardDetail:에러");
+		   ex.printStackTrace();
+	   }
+	   finally
+	   {
+		   disConnection();
+	   }
+	   return vo;
+   }
    // 수정 , 삭제 
    // 새글 => 회원가입 , 장바구니 , 예매 ...
    public void boardInsert(BoardVO vo)

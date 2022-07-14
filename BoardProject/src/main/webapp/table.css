@@ -27,7 +27,19 @@
 	background-color: FC6;
 	cursor: pointer;
 }
-
+.table_content a{
+	text-decoration: none;
+	color: black;
+}
+.table_content a:hover{
+	text-decoration: underline;
+	color: cyan;
+}
+input[type=button],
+input[type=submit]{
+	border-radius:5px;
+	background-color: pink;
+}
 
 
 
