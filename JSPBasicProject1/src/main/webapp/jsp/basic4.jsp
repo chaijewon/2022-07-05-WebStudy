@@ -10,9 +10,20 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="../css/table.css">
+<style type="text/css">
+.container{
+   width: 960px;
+}
+.table_content{
+   margin: 0px auto;
+}
+h1{
+  text-align: center;
+}
+</style>
 </head>
 <body>
-  <center>
+   <div class="container">
     <h1>지니뮤직</h1>
     <table width=700 class="table_content">
       <tr>
@@ -58,7 +69,7 @@
           }
       %>
     </table>
-  </center>
+  </div>
 </body>
 </html>
 
