@@ -18,7 +18,8 @@ public class MusicDAO {
 		   conn=dbConn.getConnection();
 		   String sql="SELECT mno,cno,poster,title,album,state,idcrement,singer "
 				     +"FROM music "
-				     +"WHERE cno=?";
+				     +"WHERE cno=? "
+				     +"ORDER BY mno ASC";
 		   ps=conn.prepareStatement(sql);
 		   ps.setInt(1,cno);
 		   ResultSet rs=ps.executeQuery();
