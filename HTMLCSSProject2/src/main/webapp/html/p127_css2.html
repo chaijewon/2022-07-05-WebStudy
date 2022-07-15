@@ -1,0 +1,51 @@
+<!-- 
+     인접 형제 (+) 
+     형제 (~)
+     
+     body
+      |
+     section
+      |
+   --------------
+   |     |      |
+  h1    ul     ul     ==> h1+ul
+       ----
+       
+     body
+      |
+     section
+      |
+   --------------
+   |     |      |
+  h1    ul     ul     ==> h1~ul (동위 선택자)
+       ----   ----
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*h1+ul li{
+  color:red
+}*/
+h1~ul li{
+  color:blue
+}
+</style>
+</head>
+<body>
+  <section>
+    <h1>결재 방법</h1>
+    <ul>
+     <li>결재 모듈(아엠포트)</li>
+    </ul>
+    <ul>
+      <li>관리자 승인(메일)=> JavaMail</li>
+    </ul>
+  </section>
+</body>
+</html>
+
+
+

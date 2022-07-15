@@ -1,0 +1,84 @@
+<!-- 
+      후손 선택자 (공백) p ul 
+      자손 선택자 (>)   p>ul
+      형제 선택자 (~)   p~ul
+      인접 선택자 (+)   p+ul
+      
+         body
+          |
+        section
+          |
+     --------------
+     |     |      |
+    header p     ul
+                  |
+               -------
+               |     |
+              li    li 
+                     |
+                    ul
+                     |
+                   -----
+                   |   |
+                  li  li
+        ------------------------ DOM (트리 형태로 저장)
+    <body>
+      <section>
+        <header></header>
+        <p></p>
+        <ul>
+          <li></li>
+          <li>
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </body>
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/* 자손 태그 */
+section > p{
+    color:red;
+}
+ul > li > p{
+    color:blue;
+}
+/* 후손 */
+ul li{
+  color:green;
+}
+/* 멀티 태그 */
+header,p{
+  color:magenta
+}
+</style>
+</head>
+<body>
+  <section>
+    <header><h1>예약방법 및 요금</h1></header>
+    <p>전화방법, 요금방법?</p>
+    <ul>
+      <li>예약방법
+       <ul>
+        <li>전화방법</li> 
+        <li>온라인</li>
+       </ul>
+      </li>
+      <li><p>확인</p></li>
+    </ul>
+  </section>
+</body>
+</html>
+
+
+
+
+

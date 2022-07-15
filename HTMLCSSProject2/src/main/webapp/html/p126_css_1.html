@@ -1,0 +1,46 @@
+<!-- 
+    선택자[속성*=값]
+    선택자[속성^=값]
+    선택자[속성$=값]
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+a {
+  display: block;
+  color:black;
+  text-decoration: none;
+}
+/* 속성값중에 포함된 값을 가지고 있는 태그 선택 
+   * => contains , '%daum%'
+*/
+a[href*=daum]{
+  color:red
+}
+/*
+     $는 끝나는 문자열 => endsWith
+     ^는 시작하는 문자열 => startsWith
+     
+     => 후기 게시판 
+        ---------
+        img[src$=jpg|png|gif] => $(확장자)
+*/
+a[href$=kr]{
+   color:magenta;
+}
+a[href^=https]{
+   color:blue
+}
+</style>
+</head>
+<body>
+   <a href="http://www.daum.net">Hello1</a><!-- red -->
+   <a href="https://www.naver.com">Hello2</a><!-- green -->
+   <a href="http://www.nate.com">Hello3</a><!-- blue -->
+   <a href="http://www.google.co.kr">Hello4</a><!-- magenta -->
+   <a href="http://www.sist.co.kr">Hello5</a><!-- magenta -->
+</body>
+</html>

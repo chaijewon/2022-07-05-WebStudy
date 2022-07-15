@@ -1,0 +1,100 @@
+<!-- 
+     속성 => 지정되어 있다 : 값을 채워서 화면 디자인 (사용자 정의는 없다)
+     --------------------------------------------------------
+       1. 태그 선택 (126페이지)
+          1) Selector (CSS , JavaScript , Jsoup)
+             기본 선택자 
+               = 전체 선택자 (*) => 바탕색 , 글꼴 통일 
+                 * {
+                       background-color:값..
+                       font-family:'맑은 고딕'
+                 }
+               = 태그 선택자 (tr,td,table...) : 태그 한개에 대한 처리 
+                 태그명 {
+                         속성 : 값 
+                 }
+               
+               = ID 선택자 (중복없는 태그를 제어 할 경우)
+                 <h1 id="a"> => 색상 변경 
+                 #a{
+                     color:red;
+                 }
+                 h1#a1{
+                     color:blue;
+                 }
+                 =====> #id명 
+                 =====> 태그명#id명
+                 =====> id는 한개만 설정 (한태그에 한개의 아이디만 설정이 가능)
+               = class  선택자 (중복이 가능) => 
+                   <ul>
+                     <li class="a"></li>
+                     <li class="a"></li>
+                     <li class="a"></li>
+                     <li class="a"></li>
+                     <li class="a"></li>
+                   </ul>
+                   ==> 목록 (ul,ol,table,dl)
+                   ==> div 
+                   ==> class는 한개의 태그에 여러개의 이름 설정이 가능 
+                       <h1 class="a b c"> => 공백
+                       ==> 1) 디자인 (공통 , 개별)
+                       ==> 2) 디자인 / 자바스크립트 
+                   <h1 class="a">
+                   .a{
+                   }
+                   h1.a{
+                   }
+             속성 선택자 
+             선택자[속성=값]
+              <input type="text">
+              => input[type=text]
+              <input type=submit>
+              => input[type=submit]
+             자손 선택자
+             후손 선택자 
+             가상 선택자 
+             
+       2. 속성으로 디자인  
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+input[type=text]{
+  width:200px;
+  height: 150px;
+  background-color: yellow;
+}
+input[type=button]{
+  width:200px;
+  height:100px;
+}
+input[value=클릭]{
+ 
+   border:1px solid green;
+}
+input[value=로그인]{
+
+   border:1px solid blue;
+}
+input[value=가입]{
+
+   border:1px solid red;
+}
+</style>
+</head>
+<body>
+  <input type=text size=20><br>
+  <input type=password size=20><br>
+  <input type=button value="클릭"><br>
+  <input type=button value="로그인"><br>
+  <input type=button value="가입"><br>
+  <input type=submit value="전송"><br>
+  <input type=reset value="취소"><br>
+</body>
+</html>
+
+
+

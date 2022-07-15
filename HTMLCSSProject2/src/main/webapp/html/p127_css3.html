@@ -1,0 +1,116 @@
+<!-- 
+     구조적 선택 
+     first-child
+     last-child
+     nth-child 
+     ---------------
+     체리
+
+자두
+
+딸기
+
+오렌지
+
+사과
+
+키위
+
+메론
+
+포도
+
+버찌
+
+야자
+
+복숭아
+
+레몬
+
+수박
+
+망고
+
+홍시
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+    2n => 0 
+          2
+          4
+          6
+          8
+          10..
+          nth-child=> 1번 
+    even , 2n+0 , 2n ==> 짝수
+*/
+table tr:nth-child(2n){
+   background-color: yellow;
+}
+/*
+     1 3 5 7 ....
+     odd , 2n+1 ==> 홀수 
+     
+     3n ==> 0 , 3, 6...
+*/
+table tr:nth-child(2n+1){
+   background-color: green;
+}
+table tr:first-child{
+   color:magenta;
+}
+table tr:last-child{
+   color:cyan;
+}
+</style>
+</head>
+<body>
+  <center>
+    <h1>과일명</h1>
+    <table border=1>
+     <tr>
+      <td>체리</td>
+     </tr>
+     <tr>
+      <td>자두</td>
+     </tr>
+     <tr>
+      <td>딸기</td>
+     </tr>
+     <tr>
+      <td>오렌지</td>
+     </tr>
+     <tr>
+      <td>사과</td>
+     </tr>
+     <tr>
+      <td>메론</td>
+     </tr>
+     <tr>
+      <td>복숭아</td>
+     </tr>
+     <tr>
+      <td>레몬</td>
+     </tr>
+     <tr>
+      <td>수박</td>
+     </tr>
+     <tr>
+      <td>홍시</td>
+     </tr>
+    </table>
+  </center>
+</body>
+</html>
+
+
+
+
+
+
