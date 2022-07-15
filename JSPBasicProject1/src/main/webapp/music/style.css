@@ -1,0 +1,75 @@
+header {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#switch-tab {
+  display: flex;
+  align-items: center;
+  max-width: 1024px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid gray;
+}
+
+.tab {
+  margin: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tab.selected {
+  font-size: 18px;
+  border-bottom: 2px solid tomato;
+}
+
+.tab.hidden {
+  display: none;
+}
+
+#movie-list {
+  display: flex;
+  max-width: 1024px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div.movie_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+div.movie_card:hover .movie_card_actions_sec {
+  transform: none;
+}
+
+.movie_card_title {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie_card_release-date {
+  text-align: center;
+}
+
+.movie_card_actions_sec {
+  position: absolute;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  padding: 8px;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
