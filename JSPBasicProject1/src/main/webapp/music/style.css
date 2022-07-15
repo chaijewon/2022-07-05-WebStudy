@@ -1,75 +1,65 @@
-header {
-  max-width: 1024px;
-  margin-right: auto;
-  margin-left: auto;
+img {
+  width: 100%;
 }
 
-#switch-tab {
+header {
+  height: 50px;
+  padding: 0 10px;
   display: flex;
   align-items: center;
-  max-width: 1024px;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid gray;
+  justify-content: flex-end;
 }
-
-.tab {
-  margin: 16px;
+header #rating-filter {
+  color: white;
+  padding: 5px;
+  background: orangered;
+  border: none;
   cursor: pointer;
-  white-space: nowrap;
 }
 
-.tab.selected {
-  font-size: 18px;
-  border-bottom: 2px solid tomato;
-}
-
-.tab.hidden {
-  display: none;
-}
-
-#movie-list {
+section {
+  margin: auto;
+  margin-top: 20px;
+  max-width: 760px;
   display: flex;
-  max-width: 1024px;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin-right: auto;
-  margin-left: auto;
 }
 
-div.movie_card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  margin-bottom: 8px;
-  overflow: hidden;
-}
-
-div.movie_card:hover .movie_card_actions_sec {
-  transform: none;
-}
-
-.movie_card_title {
-  text-align: center;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.movie_card_release-date {
-  text-align: center;
-}
-
-.movie_card_actions_sec {
-  position: absolute;
-  top: 0;
+figure {
   background-color: white;
-  width: 100%;
-  padding: 8px;
-  transform: translateX(-100%);
-  transition: all 0.5s;
+  width: 14em;
+  margin: 0.5em;
+  box-shadow: 0 5px 18px 0 gray;
+  overflow: hidden;
+  position: relative;
+}
+figure img {
+  height: 21em;
+}
+figure figcaption {
+  line-height: 2;
+  padding: 0 0.8em;
+}
+figure figcaption p {
+  text-transform: capitalize;
+  font-size: 0.8em;
+  margin-bottom: 0;
+  color: orangered;
+}
+figure figcaption .rating {
+  display: flex;
+  align-items: center;
+}
+figure figcaption .rating .fa-heart {
+  color: #fa5050;
+  margin: 0.5em 0.5em 0.5em 0;
+}
+figure figcaption .rating h4 {
+  margin: 0;
+}
+
+@media (max-width: 737px) {
+  section {
+    justify-content: center;
+  }
 }
