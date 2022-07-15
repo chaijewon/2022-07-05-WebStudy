@@ -1,0 +1,51 @@
+<!-- 
+       CSS : HTML내용과 상관없이 디자인을 바꿀 수 있다 
+       종류)
+            1. 외부 CSS => 파일로 제작 (.css) => 모든 파일에 적용을 할때 
+            2. 내부 CSS => HTML한개의 파일안에 설정 
+               <head>
+                 <style>
+                   
+                 </style>
+               </head>
+            3. 인라인 CSS => 태그 한개에 대해서 처리
+               <h1 style="">
+            4. 같은 태그를 다른곳에서 제어 => 오버라이딩이 된다 
+       사용법)
+            = 태그명{
+                 속성:값;
+                 ---- 이미 제작이 되어 있다 => 값
+                 속성:값;
+                 속성:값;
+                 /* 주석 */
+              }
+       
+       ***선택자)  ==> Jquery , JavaScript , Jsoup , Vue , React
+               
+            
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+h1{
+  color: red; /* 글자 색상 */
+  background-color: yellow; /* 바탕색*/
+  
+}
+h2{
+   text-align: center; /* 가운데 정렬*/
+}
+</style>
+</head>
+<body>
+   <h1>Hello CSS!!</h1>
+   <h2>Hello CSS!!</h2>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,69 @@
+<!-- 
+     웹(Front) => Selector (선택자)
+              CSS , JavaScript : 태그 제어 프로그램 
+              ----  ----------
+              태그 디자인 , 태그 이벤트 (마우스 , 키보드 , 클릭) 
+                          => DOMScript : Jquery , Ajax 
+                                         -------------- 신입 
+     선택자의 종류 
+     1) 전체 선택자 : * => 글꼴 통일 
+        * {
+            font-family:....
+        }
+     2) 태그 선택자 : 태그 => 한개씩 변경 
+        div {
+            크기 , 색상 ...
+        }
+        멀티 선택 
+        div , span ....{
+           속성 : 값 
+        }
+        
+        예) JQuery 
+            $('선택자').이벤트(function(){})
+            $('h1').click(function(){처리})
+            document.querySelector("h1")
+            ------------------------------ Vue , React
+       구분 
+        = class속성 => 중복이 가능 ===> .클래스명
+        = id속성 => 중복이 없다    ===> #아이디명
+        ------------------------- JS,CSS=> 구분자 
+        = name속성 => 중복이 없다 
+            form.name명.value
+        ------------------------- Java 입력값 받기 
+        => HTML , CSS , JS => 사용자 보낸값을 받을 수 없다 
+           화면 출력 , 디자인 , 이벤트 
+        
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+h1#red{
+  color:red
+}
+h1.yellow{
+  color:yellow;
+}
+</style>
+</head>
+<body>
+  <h1 id=red>Red</h1>
+  <h1 id=green>Green</h1>
+  <h1 id=blue>Blue</h1>
+  <h1 class=yellow>Yellow</h1>
+  <h1 class=cyan>Cyan</h1>
+  <h1 class=yellow>Yellow</h1>
+  <h1 class=cyan>Cyan</h1>
+</body>
+</html>
+
+
+
+
+
+
+
+
