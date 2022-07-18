@@ -9,6 +9,7 @@
 <body>
    <center>
      <h1>개인정보</h1>
+     <form method="post" action="output.jsp">
      <table birder=1 width=350>
        <tr>
         <td width=30%>이름</td>
@@ -58,7 +59,14 @@
           <input type="checkbox" value="낚시" name="hobby">낚시
         </td>
        </tr>
+       <tr>
+         <td align="center" colspan="2">
+           <!-- <input type=submit value="전송"> -->
+           <button>전송</button>
+         </td>
+       </tr>
      </table>
+     </form>
    </center>
 </body>
 </html>
