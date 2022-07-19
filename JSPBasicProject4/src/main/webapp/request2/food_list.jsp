@@ -12,16 +12,18 @@
     	poster=poster.substring(0,poster.indexOf("^"));
     	vo.setPoster(poster);
     }
+    CategoryVO cvo=dao.category_info(i);
 %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
 </head>
 <body>
-   <center>
-    <table border=1 width=600>
+    <center>
+    <table border=1 width=700>
       <tr>
        <td align="center">
        
@@ -29,13 +31,13 @@
            for(FoodVO vo:list)
            {
         %>
-              <table>
+              <table width=700>
                 <tr>
                   <td width=30% align=center rowspan="4">
                    <img src="<%=vo.getPoster() %>" width=100%>
                   </td>
                   <td width=70%>
-                    <%=vo.getName() %>
+                    <h3><%=vo.getName() %></h3>
                   </td>
                 </tr>
                 <tr>

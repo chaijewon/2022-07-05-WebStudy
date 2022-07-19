@@ -15,7 +15,7 @@
 <title>Insert title here</title>
 <style type="text/css">
 .cate_list{
-   width: 960px;
+   width: 100%;
    margin-top: 50px;
 }
 .link{
@@ -40,6 +40,7 @@ a:hover{
   margin-top: 20px;
   margin-bottom: 4px;
 }
+
 </style>
 </head>
 <body>

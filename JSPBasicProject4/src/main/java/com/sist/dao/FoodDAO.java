@@ -64,6 +64,32 @@ public class FoodDAO {
     	
     	return list;
     }
+    public CategoryVO category_info(int cno)
+    {
+    	CategoryVO vo=new CategoryVO();
+    	try
+    	{
+    		conn=dbconn.getConnection();
+    		String sql="SELECT title,subject "
+    				  +"FROM food_category "
+    				  +"WHERE cno=?";
+    		ps=conn.prepareStatement(sql);
+    		ps.setInt(1, cno);
+    		ResultSet rs=ps.executeQuery();
+    		rs.next();
+    		vo.setTitle(rs.getString(1));
+    		vo.setSubject(rs.getString(2));
+    		rs.close();
+    	}catch(Exception ex)
+    	{
+    		ex.printStackTrace();
+    	}
+    	finally
+    	{
+    		dbconn.disConnection(ps);
+    	}
+    	return vo;
+    }
     public List<FoodVO> food_category(int cno)
     {
     	List<FoodVO> list=new ArrayList<FoodVO>();
